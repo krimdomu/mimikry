@@ -5,10 +5,12 @@ from row import Row
 class Rack(models.Model):
    name = models.CharField(max_length=100)
    row = models.ForeignKey(Row)
-   height = models.IntegerField(default=42)    
+   height = models.IntegerField(default=42)
+   descr = models.CharField(max_length=4096, blank=True)
+   
    def __unicode__(self):
        return u'%s-%s' % (self.name, self.row)
-        
+   
    class Meta:
        app_label = 'opendcm'
        # order ascending by order
@@ -17,3 +19,4 @@ class Rack(models.Model):
        permissions = (
            ("view_racks", "Can view avaliable racks"),
            )
+   
