@@ -4,7 +4,8 @@ from row import Row
                 
 class Rack(models.Model):
    name = models.CharField(max_length=100)
-   row = models.ForeignKey(Row)    
+   row = models.ForeignKey(Row)
+   height = models.IntegerField(default=42)    
    def __unicode__(self):
        return u'%s-%s' % (self.name, self.row)
         
