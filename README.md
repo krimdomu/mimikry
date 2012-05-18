@@ -1,5 +1,4 @@
 mimikry
-=======
 
 This is a work-in-progress project.
 
@@ -16,5 +15,4 @@ clone repo from github, checkout devel branch, create a virtual env, link the pr
 	$ cd mimikry
 	$ python manage.py syncdb
  	$ python manage.py runserver
-
 
