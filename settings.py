@@ -3,6 +3,8 @@ import os
 import sys
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(SITE_ROOT, 'apps'))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
