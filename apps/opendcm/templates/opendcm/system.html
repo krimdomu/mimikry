@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} - {{ object.name }}{% endblock %}
+
+{% block content %}
+<h2>{{ object.name }}</h2>
+<h3>Group</h3>
+{{ object.system_group|linebreaks }}
+<h3>Rack</h3>
+{{ object.rack|linebreaks }}
+<h3>Height</h3>
+{{ object.height|linebreaks }}
+<h3>Next Boot</h3>
+{{ object.next_boot|linebreaks }}
+<h3>Description</h3>
+{{ object.descr|linebreaks }}
+{% endblock %}

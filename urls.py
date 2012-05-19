@@ -60,6 +60,11 @@ urlpatterns = patterns('',
     # rest api
     (r'^api/', include(v1_api.urls)),
     
+    # index
+    (r'^$', 'opendcm.views.index'),
+    (r'^system/(?P<name>[-\w]+)/$', 'opendcm.views.detail'),
+    
+    
     # user auth includes
     (r'^auth/', include('userauth.urls')),
 )

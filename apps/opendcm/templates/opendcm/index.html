@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} - All Systems{% endblock %}
+
+{% block content %}
+<h2>All Systems</h2>
+<ul>
+    {% for system in object_list %}
+    <li><a href="/system/{{ system.name }}">{{ system.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
