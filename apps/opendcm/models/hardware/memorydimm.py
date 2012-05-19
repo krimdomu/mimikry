@@ -16,5 +16,5 @@ class MemoryDimm(models.Model):
    class Meta:
       app_label = 'opendcm'
       permissions = (
-         ("view_System", "Can view available systems"),
+         ("view_memoryDimm", "Can view available MemoryDimm"),
          )

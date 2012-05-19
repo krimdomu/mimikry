@@ -21,6 +21,6 @@ class System(models.Model):
        ordering = ['name']
        # add view permission (GET)
        permissions = (
-           ("view_System", "Can view avaliable systems"),
+           ("view_system", "Can view avaliable systems"),
            )
    

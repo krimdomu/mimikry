@@ -12,5 +12,5 @@ class VideoCard(models.Model):
    class Meta:
       app_label = 'opendcm'
       permissions = (
-         ("view_System", "Can view available systems"),
+         ("view_videocard", "Can view available videocards"),
          )

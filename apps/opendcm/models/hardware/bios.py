@@ -17,5 +17,5 @@ class Bios(models.Model):
       app_label = 'opendcm'
       verbose_name_plural = 'bioses'
       permissions = (
-         ("view_System", "Can view available systems"),
+         ("view_bios", "Can view available bios"),
          )
