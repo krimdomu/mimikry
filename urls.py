@@ -54,10 +54,12 @@ urlpatterns = patterns('',
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
     # rest api
     (r'^api/', include(v1_api.urls)),
+    
+    # user auth includes
+    (r'^auth/', include('userauth.urls')),
 )
