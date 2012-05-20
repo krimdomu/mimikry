@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'opendcm',
     'tastypie',
+    'south',
 
 )
 

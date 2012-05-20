@@ -1,5 +1,4 @@
 mimikry
-=======
 
 This is a work-in-progress project.
 
@@ -15,6 +14,6 @@ clone repo from github, checkout devel branch, create a virtual env, link the pr
 	$ pip install -r mimikry/requirements.txt 
 	$ cd mimikry
 	$ python manage.py syncdb
+   $ python manage.py migrate opendcm
  	$ python manage.py runserver
-
 

@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
                 
 class SystemGroup(models.Model):
    name = models.CharField(max_length=100)
-   user = models.ForeignKey(User)
    descr = models.CharField(max_length=4096, blank=True)
+   parent = models.ForeignKey("self", blank=True, null=True, related_name="children")
    
    def __unicode__(self):
        return u'%s' % (self.name)
