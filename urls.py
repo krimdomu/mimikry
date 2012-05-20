@@ -22,6 +22,9 @@ urlpatterns = patterns('',
     
     # user auth includes
     (r'^opendcmauth/', include('opendcmauth.urls')),
+
+    # kickstart writer
+    (r'^kickstart/', include('opendcmkickstart.urls')),
     
     # home
     url(r'^$', 'opendcm.views.index')

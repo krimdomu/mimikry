@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'south',
     'opendcm',
     'opendcmauth',
+    'opendcmkickstart',
 )
 
 LOGIN_URL = '/opendcmauth/login/'
