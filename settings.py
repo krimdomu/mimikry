@@ -128,11 +128,11 @@ INSTALLED_APPS = (
     'tastypie',
     'south',
     'opendcm',
-    'userauth',
+    'opendcmauth',
 )
 
-LOGIN_URL = '/auth/login/'
-LOGOUT_URL = '/auth/logout/'
+LOGIN_URL = '/opendcmauth/login/'
+LOGOUT_URL = '/opendcmauth/logout/'
 LOGIN_REDIRECT_URL = '/'
 
 # A sample logging configuration. The only tangible logging

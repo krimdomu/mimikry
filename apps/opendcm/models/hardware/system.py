@@ -3,7 +3,7 @@ from django.conf import settings
 from opendcm.models.datacenter import Rack
 from opendcm.models.support import SystemGroup
 from opendcm.models.support import NextBoot
-                
+ 
 class System(models.Model):
    name = models.CharField(max_length=100)
    system_group = models.ForeignKey(SystemGroup)
@@ -11,7 +11,11 @@ class System(models.Model):
    height = models.IntegerField(default=1)
    next_boot = models.ForeignKey(NextBoot)
    descr = models.CharField(max_length=4096, blank=True)
-   
+
+   @models.permalink
+   def get_absolute_url(self):
+       return ('opendcm_system_detail', (), {'name': self.name})
+
    def __unicode__(self):
        return u'%s' % (self.name)
    
