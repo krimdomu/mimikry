@@ -21,6 +21,9 @@ from opendcm.models.hardware import SoundCard
 from opendcm.models.hardware import System
 from opendcm.models.hardware import VideoCard
 
+from opendcm.models.system import Partition
+from opendcm.models.system import Profile
+from opendcm.models.system import Disk
 
 admin.site.register(ApiKey)
 admin.site.register(SystemGroup)
@@ -42,3 +45,8 @@ admin.site.register(Processor)
 admin.site.register(SoundCard)
 admin.site.register(System)
 admin.site.register(VideoCard)
+
+admin.site.register(Partition)
+admin.site.register(Profile)
+admin.site.register(Disk)
+
