@@ -8,10 +8,10 @@ class MemoryDimm(models.Model):
    serialnumber = models.CharField(max_length=50)
    speed = models.IntegerField()
    type = models.CharField(max_length=50)
-   system = models.ForeignKey(System)
+   system = models.ForeignKey(System, related_name='memorydimms')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Memorydimm of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

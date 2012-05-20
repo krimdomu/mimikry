@@ -4,10 +4,10 @@ from opendcm.models.hardware import System
 
 class SoundCard(models.Model):
    product = models.CharField(max_length=255)
-   system = models.ForeignKey(System)
+   system = models.ForeignKey(System, related_name='soundcards')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Soundcard of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

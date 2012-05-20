@@ -6,10 +6,10 @@ class HardDrive(models.Model):
    devname = models.CharField(max_length=20)
    size = models.IntegerField()
    vendor = models.CharField(max_length=100)
-   system = models.ForeignKey(System)
+   system = models.ForeignKey(System, related_name='harddrives')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Harddrive of %s (%s)' % (self.system.name, self.devname)
 
    class Meta:
       app_label = 'opendcm'

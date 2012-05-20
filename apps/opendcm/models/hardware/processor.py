@@ -8,10 +8,10 @@ class Processor(models.Model):
    flags = models.CharField(max_length=200)
    mhz = models.CharField(max_length=50)
    cache = models.IntegerField()
-   system = models.ForeignKey(System)
+   system = models.ForeignKey(System, related_name='processors')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Processor of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

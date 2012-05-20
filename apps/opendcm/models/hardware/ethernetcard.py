@@ -9,11 +9,11 @@ class EthernetCard(models.Model):
    mac = models.CharField(max_length=17)
    name = models.CharField(max_length=20)
    type = models.CharField(max_length=50)
-   system = models.ForeignKey(System)
+   system = models.ForeignKey(System, related_name='ethernetcards')
 
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Networkcard of %s (%s)' % (self.system.name, self.name)
 
    class Meta:
       app_label = 'opendcm'
