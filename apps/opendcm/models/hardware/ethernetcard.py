@@ -13,7 +13,7 @@ class EthernetCard(models.Model):
 
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Networkcard of %s (%s)' % (self.system.name, self.name)
 
    class Meta:
       app_label = 'opendcm'

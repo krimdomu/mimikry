@@ -7,7 +7,7 @@ class VideoCard(models.Model):
    system = models.ForeignKey(System, related_name='videocards')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Videocard of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

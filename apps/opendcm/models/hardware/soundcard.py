@@ -7,7 +7,7 @@ class SoundCard(models.Model):
    system = models.ForeignKey(System, related_name='soundcards')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Soundcard of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

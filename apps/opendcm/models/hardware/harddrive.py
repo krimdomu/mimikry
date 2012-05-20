@@ -9,7 +9,7 @@ class HardDrive(models.Model):
    system = models.ForeignKey(System, related_name='harddrives')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Harddrive of %s (%s)' % (self.system.name, self.devname)
 
    class Meta:
       app_label = 'opendcm'

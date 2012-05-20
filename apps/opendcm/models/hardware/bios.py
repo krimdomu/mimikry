@@ -11,7 +11,7 @@ class Bios(models.Model):
    system = models.OneToOneField(System, related_name='bios')
 
    def __unicode__(self):
-       return u'%s' % (self.name)
+       return u'Bios of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

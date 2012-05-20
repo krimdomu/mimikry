@@ -11,7 +11,7 @@ class MemoryDimm(models.Model):
    system = models.ForeignKey(System, related_name='memorydimms')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Memorydimm of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

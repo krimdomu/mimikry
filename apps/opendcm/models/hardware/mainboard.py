@@ -12,7 +12,7 @@ class Mainboard(models.Model):
    system = models.OneToOneField(System, related_name='mainboard')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Mainboard of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'

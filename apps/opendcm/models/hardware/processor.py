@@ -11,7 +11,7 @@ class Processor(models.Model):
    system = models.ForeignKey(System, related_name='processors')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+      return u'Processor of %s' % (self.system.name)
 
    class Meta:
       app_label = 'opendcm'
