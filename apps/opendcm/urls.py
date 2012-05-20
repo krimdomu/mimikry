@@ -21,6 +21,10 @@ from opendcm.api.support import NextBoot as NextBootResource
 from opendcm.api.support import Event as EventResource
 from opendcm.api.support import SystemGroup as SystemGroupResource
 
+from opendcm.api.system import Disk as DiskResource
+from opendcm.api.system import Partition as PartitionResource
+from opendcm.api.system import Profile as ProfileResource
+
 v1_api = Api(api_name='v1')
 
 v1_api.register(DataCenterResource())
@@ -43,7 +47,9 @@ v1_api.register(NextBootResource())
 v1_api.register(EventResource())
 v1_api.register(SystemGroupResource())
 
-
+v1_api.register(DiskResource())
+v1_api.register(PartitionResource())
+v1_api.register(ProfileResource())
 
 urlpatterns = patterns('opendcm.views',
     url (r'^$', 'index', name='opendcm_index'),

@@ -15,6 +15,8 @@ class System(ModelResource):
    processors = fields.ToManyField('opendcm.api.hardware.processor.Processor', 'processors', full=True, null=True)
    soundcards = fields.ToManyField('opendcm.api.hardware.soundcard.SoundCard', 'soundcards', full=True, null=True)
    videocards = fields.ToManyField('opendcm.api.hardware.videocards.VideoCard', 'videocards', full=True, null=True)
+   disks = fields.ToManyField('opendcm.api.system.disk.Disk', 'disks', full=True, null=True)
+   profile = fields.ToOneField('opendcm.api.system.profile.Profile', 'profile', full=True, null=True)
 
    class Meta:
       queryset = SystemModel.objects.all()
