@@ -9,7 +9,7 @@ class Mainboard(models.Model):
    memorysize = models.IntegerField()
    processorcount = models.IntegerField(default=1)
    maximummemory = models.IntegerField()
-   system = models.ForeignKey(System)
+   system = models.OneToOneField(System, related_name='mainboard')
 
    def __unicode__(self):
       return u'%s' % (self.name)

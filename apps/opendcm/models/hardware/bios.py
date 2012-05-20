@@ -8,10 +8,10 @@ class Bios(models.Model):
    ssn = models.CharField(max_length=50)
    manufacturer = models.CharField(max_length=50)
    model = models.CharField(max_length=50)
-   system = models.ForeignKey(System)
+   system = models.OneToOneField(System, related_name='bios')
 
    def __unicode__(self):
-      return u'%s' % (self.name)
+       return u'%s' % (self.name)
 
    class Meta:
       app_label = 'opendcm'
